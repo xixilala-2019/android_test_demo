@@ -1,0 +1,1 @@
+include ':app', ':myapplication', ':mylibrary', ':library', ':mab', ':testmakemad', ':myapplication2', ':tools', ':ARExample', ':restfulrxjavaexample'

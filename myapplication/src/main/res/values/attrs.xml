@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PlayProgressView">
+        <attr name="color" format="color"/>
+        <attr name="type" format="integer"/>
+    </declare-styleable>
+</resources>

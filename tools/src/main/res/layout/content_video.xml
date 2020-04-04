@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent" app:flexWrap="wrap"
+        app:alignItems="stretch"
+        app:alignContent="stretch"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/changePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="changePlayer" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lockScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lockScreen" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/playOrPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="playOrPause" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+</LinearLayout>

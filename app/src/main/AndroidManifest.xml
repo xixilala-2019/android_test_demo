@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.csii.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        >
+
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".spinnerview.CitiesActivity"
+            android:label="Date Time Picker" />
+        <activity
+            android:name=".spinnerview.ColorPickerActivity"
+            android:label="Time picker" />
+        <activity
+            android:name=".spinnerview.DateTimePickerActivity"
+            android:label="Time picker with custom views"></activity>
+
+        <activity
+            android:name=".spinnerview.ProgrammaticSwitchingActivity"
+            android:label="Programmatic switching (shuffle)">
+
+        </activity>
+
+        <activity
+            android:name=".spinnerview.TimePickerActivity"
+            android:label="Repopulating data">
+
+        </activity>
+
+        <activity
+            android:name=".spinnerview.TimePickerCustomViewsActivity"
+            android:label="Color picker with custom views">
+
+        </activity>
+
+        <activity
+            android:name=".spinnerview.WheelDemo"
+            android:label="Color picker with custom views"></activity>
+
+    </application>
+</manifest>
