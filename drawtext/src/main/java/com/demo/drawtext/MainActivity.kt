@@ -1,12 +1,17 @@
 package com.demo.drawtext
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.demo.drawtext.utils.PhoneInfoUtils
+import com.google.android.material.snackbar.Snackbar
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,10 +20,33 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        Logger.addLogAdapter(AndroidLogAdapter())
+
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
+        val f1 = FirstFragment()
+        val f2 = SecondFragment()
+        val f3 = ThirdFragment()
+        val f4 = RulerFragment()
+        val f5 = FourthFragment()
+        val list = ArrayList<Fragment>()
+        list.add(f1)
+        list.add(f2)
+        list.add(f3)
+        list.add(f4)
+        list.add(f5)
+        val adapter = TPagerAdaper(list,supportFragmentManager)
+
+        viewPager.adapter = adapter
+
+        viewPager.currentItem = list.size-1
+
+        val imei1 = PhoneInfoUtils.getIMEIReflect(this)
+
+        Log.e("-------------------", " imei1=$imei1    ")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

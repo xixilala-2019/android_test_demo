@@ -18,6 +18,12 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
  */
 public class App extends Application{
 
+    private static Context mContext;
+
+    public static Context getContext () {
+        return mContext;
+    }
+
     static {
 
         SmartRefreshLayout.setDefaultRefreshFooterCreater(new DefaultRefreshFooterCreater() {
@@ -28,5 +34,11 @@ public class App extends Application{
             }
         });
 
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mContext = this;
     }
 }

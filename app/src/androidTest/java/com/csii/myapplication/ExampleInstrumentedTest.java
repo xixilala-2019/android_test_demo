@@ -1,13 +1,8 @@
 package com.csii.myapplication;
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,8 +14,18 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.csii.myapplication", appContext.getPackageName());
+
+
+       /* TelephonyManager tm = appContext.getSystemService(Context.TELEPHONY_SERVICE)
+        String did = tm.getDeviceId();
+        val imei0 = tm.getImei(0);
+
+        val method = manager.javaClass.getMethod("getImei", Int::class.javaPrimitiveType)
+        val imei1 = method.invoke(manager, 0) as String
+
+        LogUtil.info("did = $did  imei0=$imei0  imei1=$imei1")*/
     }
+
+
 }

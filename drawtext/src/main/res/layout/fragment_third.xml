@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+
+    <com.demo.drawtext.view.AnimImageView
+        android:id="@+id/animImageView"
+        android:layout_width="281px"
+        android:layout_height="276px" />
+
+    <Button
+        android:id="@+id/btnGo"
+        android:text="go"
+        app:layout_constraintTop_toBottomOf="@+id/animImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
