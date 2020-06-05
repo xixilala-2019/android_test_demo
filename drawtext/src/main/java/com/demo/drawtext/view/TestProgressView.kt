@@ -71,7 +71,7 @@ class TestProgressView : View {
             val rect = RectF(left,top,right,bottom)
             canvas.drawArc(rect, 135f, progress * 2.7f, false, progressPaint)
 
-            TLog.info("$progress = progress")
+
             val text = "$progress Gg%"
             val textWidth = progressTextPaint.measureText(text)
             val textHeight = progressTextPaint.fontSpacing

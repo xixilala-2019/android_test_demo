@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".FaceActivity">
 
-    <com.csii.myapplication.FaceView
+    <com.demo.myapplication.FaceView
         android:layout_width="300dp"
         android:layout_height="300dp"/>
 

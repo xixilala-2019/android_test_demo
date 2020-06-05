@@ -6,17 +6,27 @@ buildscript {
 
     repositories {
         google()
-        mavenCentral()
         jcenter()
+
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.6.1'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.71'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'androidx.benchmark:benchmark-gradle-plugin:1.0.0'
+
+        //aspectjtools插件
+//        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:1.1.1'
+        classpath 'com.hujiang.aspectjx:gradle-android-plugin-aspectjx:2.0.10'
+        classpath 'org.aspectj:aspectjtools:1.8.9'
+
+
+
+
     }
 
 
@@ -25,8 +35,26 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral()
         jcenter()
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/jcenter'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+        maven {
+            url 'https://plugins.gradle.org/m2/com/gradle'
+        }
+
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"

@@ -18,8 +18,24 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android{
+        applicationVariants.all { variant ->
+            if (variant.buildType.name == 'release') {
+                variant.outputs.all { output ->
+                    def buildName = "test_app"
+                    def type = variant.buildType.name
+                    def currentTime = new Date().format("YYYY年MM月dd日HH点mm分", TimeZone.getTimeZone("GMT+08:00"))
+                    def releaseApkName = buildName + '_' + type + "_v" + versionName + '_' + currentTime + '.apk'
+                    outputFileName = releaseApkName
+                    variant.packageApplication.outputDirectory = new File("./apk")
+                }
+            }
         }
     }
 
@@ -37,6 +53,14 @@ android {
 
 }
 
+//引入aspectj插件
+apply plugin: 'com.hujiang.android-aspectjx'
+apply plugin: 'android-aspectjx'
+aspectjx {
+    enabled true
+    exclude 'com.google','com.taobao'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -51,4 +75,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation 'com.orhanobut:logger:2.2.0'
+
+    //引入aspectj的依赖
+    implementation 'org.aspectj:aspectjrt:1.9.5'
 }

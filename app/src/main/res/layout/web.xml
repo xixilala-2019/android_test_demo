@@ -23,12 +23,12 @@
         android:text="face"
         android:layout_height="wrap_content" />
 
-    <com.csii.myapplication.HorizontalSelectedView
+    <com.demo.myapplication.HorizontalSelectedView
         android:id="@+id/selectView"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
 
-    <com.csii.myapplication.LateralSlidingSelectionView
+    <com.demo.myapplication.LateralSlidingSelectionView
         android:id="@+id/lateralView"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
