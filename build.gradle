@@ -25,6 +25,8 @@ buildscript {
         classpath 'org.aspectj:aspectjtools:1.8.9'
 
 
+        classpath 'com.meituan.robust:gradle-plugin:0.4.99'
+        classpath 'com.meituan.robust:auto-patch-plugin:0.4.99'
 
 
     }

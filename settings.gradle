@@ -1,8 +1,6 @@
 include ':relilib'
 include ':module2'
 include ':app', ':myapplication', ':mylibrary', ':library', ':mab', ':testmakemad', ':tools', ':ARExample', ':restfulrxjavaexample', ':testvideoprocess'
- 
- 
 include ':drawtext'
 include ':benchmarkDemo'
 include ':util'
