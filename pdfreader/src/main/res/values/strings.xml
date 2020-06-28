@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PDFReader</string>
+    <string name="import_pdf">导入</string>
+    <string name="about">关于</string>
 </resources>

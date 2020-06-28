@@ -1,3 +1,5 @@
+include ':testappprocess'
+include ':testbottomnavigationview'
 include ':pdfreader'
 include ':relilib'
 include ':module2'

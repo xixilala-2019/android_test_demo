@@ -4,9 +4,12 @@ import android.Manifest
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_main.*
 
 const val READ_SD_CARD_PERMISSION = Manifest.permission.READ_EXTERNAL_STORAGE
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             requestPermissions(arrayOf(READ_SD_CARD_PERMISSION),1)
         }
 
-
+        pdfFilesView.
     }
 
 }
